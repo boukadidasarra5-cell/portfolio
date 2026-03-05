@@ -588,7 +588,7 @@ body::before {
 body.light-mode {
   --bg: #faf5f8;             
   --panel: #ffffff;          
-  --panel-2: #f7eaf1;         
+  --panel-2: #fae4f0;         
   --text: #060606;            
   --muted: #b86b8f;          
   --primary: #e84d9e;        
