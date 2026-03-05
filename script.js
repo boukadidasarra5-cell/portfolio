@@ -80,3 +80,20 @@ function changeText() {
 
 changeText();
 setInterval(changeText, 2500);
+const themeToggle = $("#theme-toggle");
+const body = document.body;
+if (localStorage.getItem("theme") === "light") {
+  body.classList.add("light-mode");
+  themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+}
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("light-mode");
+
+  const isLight = body.classList.contains("light-mode");
+  themeToggle.innerHTML = isLight
+    ? '<i class="fa-solid fa-sun"></i>'
+    : '<i class="fa-solid fa-moon"></i>';
+
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+});

@@ -375,9 +375,11 @@ body::before {
 
 .project-filters {
   display: flex;
-  gap: 10px;
-  margin-bottom: 25px;
+  justify-content: center;
+  gap: 12px;
   flex-wrap: wrap;
+  margin: 0 auto 2rem;
+  width: 100%
 }
 
 .filter-btn {
@@ -567,4 +569,35 @@ body::before {
   font-weight: 500;
   border-radius: 14px;
   font-size: 0.85rem;
+}
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+  color: var(--primary);
+}
+
+
+body.light-mode {
+  --bg: #faf5f8;             
+  --panel: #ffffff;          
+  --panel-2: #f7eaf1;         
+  --text: #060606;            
+  --muted: #b86b8f;          
+  --primary: #e84d9e;        
+  --primary-20: rgba(232, 77, 158, 0.15);
+  --primary-40: rgba(232, 77, 158, 0.35);
+  --glow: 0 0 8px rgba(232, 77, 158, 0.25);
+}
+body.light-mode .navbar {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(245,245,245,0.7));
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
 }
