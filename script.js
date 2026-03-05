@@ -1,4 +1,3 @@
-// Helpers
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
@@ -8,49 +7,76 @@ const navMenu = $(".nav-menu");
 const menuToggle = $(".menu-toggle");
 const logoBtn = $(".logo");
 
-// Navigation: show section + active state + update hash
 function showSection(id) {
   sections.forEach(s => s.classList.toggle("active", s.id === id));
-  navLinks.forEach(l => l.classList.toggle("active", l.getAttribute("data-target") === id));
+  navLinks.forEach(l => l.classList.toggle("active", l.dataset.target === id));
   history.replaceState(null, "", `#${id}`);
 }
 
-// Init from URL hash
 function initFromHash() {
   const hash = location.hash.replace("#", "") || "accueil";
-  const exists = sections.some(s => s.id === hash);
-  showSection(exists ? hash : "accueil");
+  const valid = sections.some(s => s.id === hash);
+  showSection(valid ? hash : "accueil");
 }
 
-// Click on nav links
 navLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
+  link.addEventListener("click", e => {
     e.preventDefault();
-    const target = link.getAttribute("data-target");
-    showSection(target);
-    navMenu.classList.remove("show"); // close mobile menu
+    showSection(link.dataset.target);
+    navMenu.classList.remove("show");
   });
 });
 
-// Logo returns home
 logoBtn.addEventListener("click", () => showSection("accueil"));
-
-// Mobile menu toggle
 menuToggle.addEventListener("click", () => navMenu.classList.toggle("show"));
 
-// Enable any element with data-target (if needed later)
 $$("[data-target]").forEach(el => {
   if (!el.classList.contains("nav-link") && el !== logoBtn) {
-    el.addEventListener("click", (e) => {
-      const target = el.getAttribute("data-target");
-      if (target) {
-        e.preventDefault();
-        showSection(target);
-        navMenu.classList.remove("show");
-      }
+    el.addEventListener("click", e => {
+      e.preventDefault();
+      showSection(el.dataset.target);
+      navMenu.classList.remove("show");
     });
   }
 });
 
-// Initialize
 window.addEventListener("DOMContentLoaded", initFromHash);
+
+const filterButtons = $$(".filter-btn");
+const projectCards = $$(".project-card");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const filter = btn.dataset.filter;
+
+    projectCards.forEach(card => {
+      const category = card.dataset.category;
+      card.style.display = (filter === "all" || category === filter) ? "flex" : "none";
+    });
+  });
+});
+
+const phrases = [
+  "Étudiante à Epitech",
+  "Passionnée de cybersécurité",
+  "À la recherche d'un stage"
+];
+
+let index = 0;
+const dynamicText = $("#dynamic-text");
+
+function changeText() {
+  if (!dynamicText) return;
+  dynamicText.style.opacity = 0;
+
+  setTimeout(() => {
+    dynamicText.textContent = phrases[index];
+    dynamicText.style.opacity = 1;
+    index = (index + 1) % phrases.length;
+  }, 300);
+}
+
+changeText();
+setInterval(changeText, 2500);

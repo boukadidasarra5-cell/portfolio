@@ -1,11 +1,10 @@
-/* ========== Variables & Reset ========== */
 :root {
   --bg: #0b0b16;
   --panel: #161626;
   --panel-2: #1d1d2f;
   --text: #f2f2f7;
   --muted: #a0a0b8;
-  --primary: #ff4d9a;           /* Néon rose */
+  --primary: #ff4d9a;
   --primary-20: rgba(255, 77, 154, 0.2);
   --primary-40: rgba(255, 77, 154, 0.4);
   --glow: 0 0 12px rgba(255, 77, 154, 0.6), 0 0 32px rgba(255, 77, 154, 0.3);
@@ -15,6 +14,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { height: 100%; }
+
 body {
   font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   background: radial-gradient(1100px 700px at 20% 10%, rgba(255,77,154,0.08), transparent),
@@ -24,7 +24,6 @@ body {
   line-height: 1.65;
 }
 
-/* Subtle grid backdrop */
 body::before {
   content: "";
   position: fixed;
@@ -37,7 +36,6 @@ body::before {
   z-index: -1;
 }
 
-/* ========== Navbar ========== */
 .navbar {
   position: fixed;
   width: 100%;
@@ -66,11 +64,13 @@ body::before {
   cursor: pointer;
   font-weight: 700;
 }
+
 .logo-icon {
   font-size: 1.15rem;
   color: var(--primary);
   filter: drop-shadow(0 0 6px var(--primary));
 }
+
 .logo-text { font-size: 1.05rem; }
 
 .nav-menu {
@@ -78,6 +78,7 @@ body::before {
   display: flex;
   gap: 0.5rem;
 }
+
 .nav-link {
   color: var(--text);
   text-decoration: none;
@@ -85,7 +86,9 @@ body::before {
   border-radius: 10px;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
+
 .nav-link:hover { background: rgba(255,255,255,0.05); }
+
 .nav-link.active {
   color: var(--primary);
   background: rgba(255,255,255,0.06);
@@ -99,7 +102,6 @@ body::before {
   cursor: pointer;
 }
 
-/* ========== Sections ========== */
 .main-content { padding-top: 76px; }
 
 .section {
@@ -108,6 +110,7 @@ body::before {
   padding: 2.8rem 1rem;
   animation: fadeIn 0.5s ease forwards;
 }
+
 .section.active { display: block; }
 
 .section-title {
@@ -126,7 +129,6 @@ body::before {
   text-shadow: 0 0 10px var(--primary-40);
 }
 
-/* ========== Hero ========== */
 .hero { max-width: 900px; margin: 0 auto; text-align: center; }
 
 .profile-container {
@@ -135,6 +137,7 @@ body::before {
   height: 160px;
   margin: 0 auto 1rem;
 }
+
 .profile {
   width: 100%;
   height: 100%;
@@ -143,6 +146,7 @@ body::before {
   box-shadow: var(--glow);
   object-fit: cover;
 }
+
 .profile-glow {
   position: absolute;
   inset: -8px;
@@ -166,7 +170,6 @@ body::before {
   color: #d9d9e8;
 }
 
-/* ========== Cards / Grids ========== */
 .cards-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -174,6 +177,7 @@ body::before {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.1rem;
 }
+
 .card {
   background: linear-gradient(180deg, var(--panel), var(--panel-2));
   border: 1px solid rgba(255,255,255,0.08);
@@ -183,26 +187,28 @@ body::before {
   box-shadow: var(--shadow);
   transition: transform 0.18s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
+
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 24px var(--primary-40), var(--shadow);
   border-color: var(--primary-40);
 }
+
 .card i {
   font-size: 1.8rem;
   margin-bottom: 0.4rem;
   color: var(--primary);
   text-shadow: 0 0 10px var(--primary-40);
 }
+
 .card h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
   color: var(--primary);
 }
-.card p {
-  margin: 0.3rem 0;
-  color: var(--text);
-}
+
+.card p { margin: 0.3rem 0; color: var(--text); }
+
 .card .date {
   display: block;
   margin-top: 0.5rem;
@@ -211,20 +217,22 @@ body::before {
   font-style: italic;
 }
 
-/* ========== Skill bars ========== */
 .skill-bars {
   max-width: 900px;
   margin: 1.6rem auto 0;
   display: grid;
   gap: 0.9rem;
 }
+
 .skill-bar {
   display: grid;
   grid-template-columns: 180px 1fr;
   align-items: center;
   gap: 0.8rem;
 }
+
 .skill-bar .label { color: var(--muted); font-weight: 600; }
+
 .skill-bar .bar {
   position: relative;
   height: 10px;
@@ -232,6 +240,7 @@ body::before {
   border-radius: 999px;
   overflow: hidden;
 }
+
 .skill-bar .fill {
   position: absolute;
   left: 0; top: 0; bottom: 0;
@@ -240,12 +249,12 @@ body::before {
   border-radius: 999px;
 }
 
-/* ========== Timeline (Formation) ========== */
 .timeline {
   position: relative;
   margin: 2rem auto;
   max-width: 700px;
 }
+
 .timeline::before {
   content: "";
   position: absolute;
@@ -256,19 +265,23 @@ body::before {
   background: var(--primary);
   transform: translateX(-50%);
 }
+
 .timeline-item {
   position: relative;
   width: 50%;
   padding: 1.2rem 1rem;
 }
+
 .timeline-item:nth-child(odd) {
   left: 0;
   text-align: right;
 }
+
 .timeline-item:nth-child(even) {
   left: 50%;
   text-align: left;
 }
+
 .timeline-icon {
   position: absolute;
   top: 0;
@@ -280,6 +293,7 @@ body::before {
   padding: 0.55rem;
   box-shadow: var(--glow);
 }
+
 .timeline-content {
   background: linear-gradient(180deg, var(--panel), var(--panel-2));
   border: 1px solid rgba(255,255,255,0.08);
@@ -289,21 +303,20 @@ body::before {
   display: inline-block;
   max-width: 80%;
 }
+
 .timeline-content h3 {
   color: var(--primary);
   margin-bottom: 0.5rem;
 }
-.timeline-content p {
-  color: var(--text);
-  margin: 0.3rem 0;
-}
+
+.timeline-content p { color: var(--text); margin: 0.3rem 0; }
+
 .timeline-content .date {
   font-size: 0.9rem;
   color: var(--muted);
   font-style: italic;
 }
 
-/* ========== Projets flip cards ========== */
 .projects-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -311,10 +324,12 @@ body::before {
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 1.5rem;
 }
+
 .project-card {
   perspective: 1000px;
-  min-height: 280px; /* hauteur pour le flip */
+  min-height: 280px;
 }
+
 .project-card-inner {
   position: relative;
   width: 100%;
@@ -322,9 +337,11 @@ body::before {
   transform-style: preserve-3d;
   transition: transform 0.6s;
 }
+
 .project-card:hover .project-card-inner {
   transform: rotateY(180deg);
 }
+
 .project-card .card-front,
 .project-card .card-back {
   position: absolute;
@@ -338,49 +355,68 @@ body::before {
   backface-visibility: hidden;
   box-shadow: var(--shadow);
 }
-.project-card .card-front img {
-  max-width: 100%;
-  border-radius: var(--radius);
-  margin-bottom: 0.6rem;
-}
-.project-card .card-front h3 {
-  color: var(--primary);
-}
+
+.project-card .card-front h3 { color: var(--primary); }
+
 .project-card .card-back {
   transform: rotateY(180deg);
   display: grid;
   place-items: center;
   gap: 0.6rem;
 }
+
 .project-card .card-back a {
   color: var(--text);
   font-weight: 600;
   text-decoration: none;
 }
-.project-card .card-back a:hover {
-  color: var(--primary);
+
+.project-card .card-back a:hover { color: var(--primary); }
+
+.project-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 
-/* ========== Contact links ========== */
+.filter-btn {
+  padding: 8px 18px;
+  border: none;
+  background: #ff7ab6;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.filter-btn:hover { background: #d8d8ff; }
+
+.filter-btn.active {
+  background: #f8def2;
+  color: rgb(29, 1, 1);
+}
+
 .contact-cards a {
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
 }
+
 .contact-cards a:hover { color: var(--primary); }
+
 .links-stack { display: grid; gap: 0.25rem; }
 
-/* ========== Animations ========== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ========== Responsive ========== */
 @media (max-width: 920px) {
   .skill-bar { grid-template-columns: 140px 1fr; }
   .timeline-content { max-width: 88%; }
 }
+
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -397,10 +433,10 @@ body::before {
     min-width: 220px;
     box-shadow: var(--shadow);
   }
+
   .nav-menu.show { display: flex; }
   .menu-toggle { display: block; }
 
-  /* Timeline en une colonne sur mobile */
   .timeline::before { left: 8px; transform: none; }
   .timeline-item { width: 100%; padding-left: 2rem; }
   .timeline-item:nth-child(odd),
@@ -411,72 +447,7 @@ body::before {
   .timeline-icon { left: 8px; transform: translateY(-50%); }
   .timeline-content { max-width: 100%; }
 }
-/* Projets flip cards */
-.projects-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 1.5rem;
-}
 
-.project-card {
-  perspective: 1000px;
-  min-height: 280px; /* hauteur pour le flip */
-}
-
-.project-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.project-card:hover .project-card-inner {
-  transform: rotateY(180deg);
-}
-
-.project-card .card-front,
-.project-card .card-back {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(180deg, var(--panel), var(--panel-2));
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: var(--radius);
-  padding: 1rem;
-  text-align: center;
-  backface-visibility: hidden;
-  box-shadow: var(--shadow);
-}
-
-.project-card .card-front img {
-  max-width: 100%;
-  border-radius: var(--radius);
-  margin-bottom: 0.6rem;
-}
-
-.project-card .card-front h3 {
-  color: var(--primary);
-}
-
-.project-card .card-back {
-  transform: rotateY(180deg);
-  display: grid;
-  place-items: center;
-  gap: 0.6rem;
-}
-
-.project-card .card-back a {
-  color: var(--text);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.project-card .card-back a:hover {
-  color: var(--primary);
-}
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
@@ -530,12 +501,14 @@ body::before {
   background: #ff7ab6;
   transform: translateY(-2px);
 }
+
 .form-status {
   margin-top: 1rem;
   font-weight: 600;
   color: var(--primary);
   text-align: center;
 }
+
 .contact-box {
   max-width: 650px;
   margin: 2rem auto;
@@ -553,9 +526,6 @@ body::before {
   color: var(--text);
 }
 
-.contact-form {
-  margin-top: 1rem;
-}
 .presentation-card {
   max-width: 700px;
   margin: 2rem auto;
@@ -567,11 +537,34 @@ body::before {
   line-height: 1.6;
 }
 
-.presentation-card p {
-  font-size: 1rem;
-  color: var(--text);
+.presentation-card p { font-size: 1rem; color: var(--text); }
+.presentation-card strong { color: var(--primary); }
+.stage-badge {
+  display: inline-block;
+  margin: 0.8rem auto 1.2rem;
+  padding: 6px 14px;
+  background: rgba(255, 77, 154, 0.15);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  box-shadow: var(--glow);
+  animation: pulseBadge 2.5s infinite ease-in-out;
 }
 
-.presentation-card strong {
+@keyframes pulseBadge {
+  0% { box-shadow: 0 0 8px var(--primary-40); }
+  50% { box-shadow: 0 0 18px var(--primary); }
+  100% { box-shadow: 0 0 8px var(--primary-40); }
+}
+.stage-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255, 77, 154, 0.12);
+  border: 1px solid rgba(255, 77, 154, 0.4);
   color: var(--primary);
+  font-weight: 500;
+  border-radius: 14px;
+  font-size: 0.85rem;
 }

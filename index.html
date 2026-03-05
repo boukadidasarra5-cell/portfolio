@@ -40,12 +40,17 @@
     </div>
     <h1 class="hero-name">Sarra Boukadida</h1>
     <p class="hero-location"><i class="fa-solid fa-location-dot"></i> Nice, France</p>
+    <div class="stage-badge">● Disponible pour un stage</div>
+    <p class="changing-text">
+  <span id="dynamic-text"></span>
+</p>
+
     <div class="card presentation-card">
       <p>
         Actuellementétudiante en <strong>Bachelor Informatique à Epitech Nice.</strong><br>
-J’aime transformer des idées en projets concrets : applications web, mini-jeux, outils techniques… Chaque réalisation est pour moi une occasion d’apprendre, d’expérimenter et de progresser.<br>
-Je développe un intérêt particulier pour <strong>le développement full-stack</strong> et <strong>la cybersécurité</strong>, deux domaines où logique, créativité et challenge se rencontrent.<br>
-<strong>Mon objectif </strong>: explorer, apprendre et créer des projets ambitieux qui me poussent à dépasser mes limites.
+J’aime transformer des idées en projets concrets : applications web, mini-jeux, outils techniques… Chaque projet est pour moi une occasion d’apprendre, d’expérimenter et de progresser.<br>
+Je m’intéresse particulièrement au<strong> développement full‑stack</strong> et à <strong>la cybersécurité</strong>, deux domaines où logique, créativité et challenge se rencontrent.
+<br> Je suis aujourd’hui à la recherche<strong> d’un stage de 1 à 3 mois, à partir de juin</strong>, dans le développement web, afin de continuer à évoluer et contribuer à des projets ambitieux.
       </p>
     </div>
   </div>
@@ -84,41 +89,44 @@ Je développe un intérêt particulier pour <strong>le développement full-stack
   </div>
 </section>
 
-
 <section id="projets" class="section">
   <h2 class="section-title">Projets</h2>
+  <div class="project-filters">
+  <button class="filter-btn active" data-filter="all">Tous</button>
+  <button class="filter-btn" data-filter="web">Web</button>
+  <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+  <button class="filter-btn" data-filter="secu">Sécurité</button>
+  <button class="filter-btn" data-filter="game">Jeu</button>
+  <button class="filter-btn" data-filter="data">Data</button>
+</div>
   <div class="projects-container">
-    
-<div class="project-card">
-  <div class="project-card-inner">
-    <div class="card-front">
-      <i class="fa-solid fa-rocket"></i>
-      <h3> Hackathon - Act in Space 2026 – Cannes</h3>
-      <p>24h – Défi innovation</p>
+    <div class="project-card" data-category="hackathon">
+      <div class="project-card-inner">
+        <div class="card-front">
+          <i class="fa-solid fa-rocket"></i>
+          <h3>Hackathon - Act in Space 2026 – Cannes</h3>
+          <p>24h – Défi innovation</p>
+        </div>
+        <div class="card-back">
+          <p>Un défi créatif et intense en seulement 24h.</p>
+          <p>Nous avons conçu un projet autour de <strong>la cybersécurité et de la protection des communications satellites </strong>, en réfléchissant aux “routes” critiques et aux moyens de les sécuriser et présenté un pitch final devant des experts.</p>
+        </div>
+      </div>
     </div>
-    <div class="card-back">
-      <p>Un défi créatif et intense en seulement 24h.</p>
-      <p>nous avons conçu un projet autour de la cybersécurité et de la protection des communications satellites, en réfléchissant aux “routes” critiques et aux moyens de les sécuriser et présenté un pitch final devant des experts.</p>
-      <p>Expérience unique de collaboration et dépassement de soi.</p>
+    <div class="project-card" data-category="hackathon">
+      <div class="project-card-inner">
+        <div class="card-front">
+          <i class="fa-solid fa-leaf"></i>
+          <h3>Hackathon - Climat & Data 2026 – The Shifters</h3>
+          <p>72h – Challenge Innovation</p>
+        </div>
+        <div class="card-back">
+          <p>En 72h, nous avons imaginé <strong> une application </strong> pour aider les citoyens à agir concrètement pour<strong> le climat</strong>.<br>Un challenge intense où créativité, data et collaboration étaient au cœur de chaque décision.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="project-card">
-  <div class="project-card-inner">
-    <div class="card-front">
-      <i class="fa-solid fa-leaf"></i>
-      <h3>Hackathon- Climat & Data 2026– The Shifters</h3>
-      <p>72h – Challenge Innovation</p>
-    </div>
-    <div class="card-back">
-      <p>En 72h, nous avons imaginé une application pour aider les citoyens à agir concrètement pour le climat. Un challenge intense où créativité, data et collaboration étaient au cœur de chaque décision.</p>
-    </div>
-  </div>
-</div>
 
-
-    <!--  E-TODO -->
-    <div class="project-card">
+    <div class="project-card" data-category="web">
       <div class="project-card-inner">
         <div class="card-front">
           <i class="fa-solid fa-clipboard-list"></i>
@@ -137,8 +145,7 @@ Je développe un intérêt particulier pour <strong>le développement full-stack
       </div>
     </div>
 
-    <!--  Portfolio Perso -->
-    <div class="project-card">
+    <div class="project-card" data-category="web">
       <div class="project-card-inner">
         <div class="card-front">
           <i class="fa-solid fa-globe"></i>
@@ -156,27 +163,27 @@ Je développe un intérêt particulier pour <strong>le développement full-stack
         </div>
       </div>
     </div>
-<!--  OWASP Juice Shop -->
-<div class="project-card">
-  <div class="project-card-inner">
-    <div class="card-front">
-      <i class="fa-solid fa-shield-halved"></i>
-      <h3>Hack & Juice</h3>
-      <p>Sécurité web</p>
-    </div>
-    <div class="card-back">
-      <p>Analyse de vulnérabilités sur OWASP Juice Shop.</p>
-      <ul>
-        <li>OWASP Top 10</li>
-        <li>Requêtes HTTP</li>
-        <li>Identification de failles d’accès et d’injection</li>
-      </ul>
-      <p>Mon rôle : analyse des failles et résolution de challenges.</p>
-    </div>
-  </div>
-</div>
 
-    <div class="project-card">
+    <div class="project-card" data-category="secu">
+      <div class="project-card-inner">
+        <div class="card-front">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Hack & Juice</h3>
+          <p>Sécurité web</p>
+        </div>
+        <div class="card-back">
+          <p>Analyse de vulnérabilités sur OWASP Juice Shop.</p>
+          <ul>
+            <li>OWASP Top 10</li>
+            <li>Requêtes HTTP</li>
+            <li>Failles d’accès et d’injection</li>
+          </ul>
+          <p>Mon rôle : analyse des failles et résolution de challenges.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="game">
       <div class="project-card-inner">
         <div class="card-front">
           <i class="fa-solid fa-gamepad"></i>
@@ -186,58 +193,62 @@ Je développe un intérêt particulier pour <strong>le développement full-stack
         <div class="card-back">
           <p>Jeu vidéo 2D développé en projet personnel.</p>
           <ul>
-            <li>Front:HTML/CSS/ JavaScript</li>
+            <li>Front : HTML/CSS/JavaScript</li>
             <li>Moteur : Canvas API</li>
-            <li><strong>Concept :</strong> le joueur contrôle une patate qui doit éviter des obstacles et récolter des bonus.</li>
+            <li>Concept : éviter obstacles + récolter bonus</li>
           </ul>
-          <p>Mon rôle : développement complet .</p>
         </div>
       </div>
     </div>
 
-<div class="project-card">
-  <div class="project-card-inner">
-    <div class="card-front">
-      <i class="fa-solid fa-mug-hot"></i>
-      <h3>Cozy Café</h3>
-      <p>Mini‑jeu café – Python/Pygame</p>
+    <div class="project-card" data-category="game">
+      <div class="project-card-inner">
+        <div class="card-front">
+          <i class="fa-solid fa-mug-hot"></i>
+          <h3>Cozy Café</h3>
+          <p>Mini‑jeu café – Python/Pygame</p>
+        </div>
+        <div class="card-back">
+          <p>Mini‑jeu cozy développé en projet personnel.</p>
+          <a href="https://github.com/boukadidasarra5-cell/shop-manager" target="_blank" class="card-link">Cliquez pour plus d'informations !</a>
+        </div>
+      </div>
     </div>
-    <div class="card-back">
-      <p>Mini‑jeu café cozy développé en Projet personnel.</p>
-      <a href="https://github.com/boukadidasarra5-cell/shop-manager" target="_blank" class="card-link"> Cliquez pour plus d'informations !</a>
-    </div>
-  </div>
-</div>
 
-<div class="project-card">
-  <div class="project-card-inner">
-    <div class="card-front">
-      <i class="fa-solid fa-trophy"></i>
-      <h3>Challenge Innovatech-Elles Bougent</h3>
-      <p>Hackathon</p>
+    <div class="project-card" data-category="hackathon">
+      <div class="project-card-inner">
+        <div class="card-front">
+          <i class="fa-solid fa-trophy"></i>
+          <h3>Challenge Innovatech – Elles Bougent</h3>
+          <p>Hackathon</p>
+        </div>
+        <div class="card-back">
+           <p>Hackathon intergénérationnel, proposant à des équipes composées de marraines, étudiantes et lycéennes de réfléchir aux enjeux de demain.</p>
+        </div>
+      </div>
     </div>
-    <div class="card-back">
-      <p>Hackathon intergénérationnel, proposant à des équipes composées de marraines, étudiantes et lycéennes de réfléchir aux enjeux de demain.</p>
-    </div>
-  </div>
-</div>
 
-<div class="project-card">
-  <div class="project-card-inner">
-    <div class="card-front">
-      <i class="fa-solid fa-train"></i>
-      <h3>TARDIS</h3>
-      <p>Projet DataScience</p>
+    <div class="project-card" data-category="data">
+      <div class="project-card-inner">
+        <div class="card-front">
+          <i class="fa-solid fa-train"></i>
+          <h3>TARDIS</h3>
+          <p>Projet DataScience</p>
+        </div>
+        <div class="card-back">
+          <p>Analyse de données SNCF : cleaning, exploration, visualisation.</p>
+          <ul>
+            <li>Python</li>
+            <li>Jupyter Notebook</li>
+            <li>Streamlit</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="card-back">
-      <p>Projet d’analyse de données SNCF : data cleaning, exploration et visualisation avec Python / Jupyter Notebook et streamlit.</p>
-    </div>
-  </div>
-</div>
-
 
   </div>
 </section>
+
 
   <section id="skills" class="section">
     <h2 class="section-title">Compétences</h2>
@@ -264,7 +275,7 @@ Je développe un intérêt particulier pour <strong>le développement full-stack
       <div class="skill-bar"><span class="label">Database (MySQL)</span><div class="bar"><span class="fill" style="width:65%"></span></div></div>
     </div>
 
-    <!-- Soft Skills -->
+
     <h3 class="sub-title">Soft Skills</h3>
     <div class="cards-container">
       <div class="card"><i class="fa-solid fa-comments"></i> Communication</div>
@@ -319,11 +330,10 @@ Je développe un intérêt particulier pour <strong>le développement full-stack
     </div>
   </div>
 
-  <!-- Bloc description + formulaire -->
+  <!--formulaire -->
   <div class="contact-box">
     <p class="form-description">
-      Pour toute demande professionnelle, veuillez remplir ce formulaire.  
-      Je vous répondrai dans les plus brefs délais.
+    Pour toute demande professionnelle, remplissez ce formulaire. Je vous répondrai dans les meilleurs délais
     </p>
 
     <form class="contact-form" action="https://formspree.io/f/xanrblod" method="POST">
