@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar">
   <div class="nav-container">
     <button class="logo" data-target="accueil">
@@ -18,349 +17,416 @@
     </button>
     <ul class="nav-menu">
       <li><a href="#" class="nav-link active" data-target="accueil">Profil</a></li>
-      <li><a href="#" class="nav-link" data-target="formation">Formation</a></li>
-      <li><a href="#" class="nav-link" data-target="skills">Compétences</a></li>
-      <li><a href="#" class="nav-link" data-target="projets">Projets</a></li>
-      <li><a href="#" class="nav-link" data-target="languages">Langues</a></li>
-      <li><a href="#" class="nav-link" data-target="interets">Centres d'intérêt</a></li>
+      <li><a href="#" class="nav-link" data-target="formation">About Me</a></li>
+      <li><a href="#" class="nav-link" data-target="projets">Projets & Skills</a></li>
       <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
-
     </ul>
     <button id="theme-toggle" class="theme-toggle">
       <i class="fa-solid fa-moon"></i>
     </button>
-
     <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
   </div>
 </nav>
 
 <main class="main-content">
 
- <section id="accueil" class="section active">
-  <div class="hero">
-    <div class="profile-container">
-      <img src="profile.jpg" alt="Sarra Boukadida" class="profile"/>
-      <div class="profile-glow"></div>
-    </div>
-    <h1 class="hero-name">Sarra Boukadida</h1>
-    <p class="hero-location"><i class="fa-solid fa-location-dot"></i> Nice, France</p>
-    <div class="stage-badge">● Disponible pour un stage</div>
-    <p class="changing-text">
-  <span id="dynamic-text"></span>
-</p>
+  <section id="accueil" class="section active">
+    <div class="hero">
+      <div class="hero-top">
+        <div class="profile-container">
+          <img src="profile.jpg" alt="Sarra Boukadida" class="profile"/>
+          <div class="profile-glow"></div>
+        </div>
+        <div class="hero-info">
+          <h1 class="hero-name">Sarra Boukadida</h1>
+          <p class="hero-location"><i class="fa-solid fa-location-dot"></i> Nice, France</p>
+          <div class="stage-badge">
+            <i class="fa-solid fa-circle-dot pulse-dot"></i>
+            Disponible pour un stage – à partir de juin
+          </div>
+          <p class="changing-text"><span id="dynamic-text"></span></p>
+        </div>
+      </div>
 
-    <div class="card presentation-card">
-      <p>
-        Actuellementétudiante en <strong>Bachelor Informatique à Epitech Nice.</strong><br>
-J’aime transformer des idées en projets concrets : applications web, mini-jeux, outils techniques… Chaque projet est pour moi une occasion d’apprendre, d’expérimenter et de progresser.<br>
-Je m’intéresse particulièrement au<strong> développement full‑stack</strong> et à <strong>la cybersécurité</strong>, deux domaines où logique, créativité et challenge se rencontrent.
-<br> Je suis aujourd’hui à la recherche<strong> d’un stage de 1 à 3 mois, à partir de juin</strong>, dans le développement web, afin de continuer à évoluer et contribuer à des projets ambitieux.
+      <div class="card presentation-card">
+        <p>
+          Étudiante en <strong>Bachelor Informatique à Epitech Nice</strong>, je transforme des idées en projets concrets : applications web, mini-jeux, outils techniques…
+          Je m'intéresse particulièrement au <strong>développement full-stack</strong> et à <strong>la cybersécurité</strong>.
+          <br><br>
+          Je recherche <strong>un stage de 1 à 3 mois, à partir de juin</strong>, dans le développement web.
+        </p>
+      </div>
+
+      <div class="hero-links">
+        <a href="mailto:sarra.boukadida@epitech.eu" class="hero-link">
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
+        <a href="https://github.com/boukadidasarra5-cell" target="_blank" class="hero-link">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/sarra-boukadida-214601389/" target="_blank" class="hero-link">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="formation" class="section">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="formation-layout">
+
+      <div class="formation-left">
+        <h3 class="sub-title" style="text-align:left; margin-top:0; margin-bottom:1rem">Formation</h3>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-content">
+              <h3>Baccalauréat Général</h3>
+              <p>Spécialité scientifique — <strong>Mention bien</strong></p>
+              <span class="date">2022 – 2024</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="timeline-content">
+              <h3>Licence Informatique Accès Santé</h3>
+              <p>Université de Bretagne Sud – Lorient</p>
+              <span class="date">2024 – 2025</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="timeline-content">
+              <h3>Bachelor Informatique</h3>
+              <p>Epitech – Nice <span class="badge-rncp">RNCP Niv. 6</span></p>
+              <span class="date">2025 – En cours</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="formation-right">
+        <h3 class="sub-title">Langues</h3>
+        <div class="skill-bars">
+          <div class="skill-bar">
+            <span class="label">Anglais (C1)</span>
+            <div class="bar"><span class="fill" style="width:85%"></span></div>
+          </div>
+          <div class="skill-bar">
+            <span class="label">Français (Bilingue)</span>
+            <div class="bar"><span class="fill" style="width:100%"></span></div>
+          </div>
+          <div class="skill-bar">
+            <span class="label">Arabe (Bilingue)</span>
+            <div class="bar"><span class="fill" style="width:100%"></span></div>
+          </div>
+          <div class="skill-bar">
+            <span class="label">Allemand (A2)</span>
+            <div class="bar"><span class="fill" style="width:40%"></span></div>
+          </div>
+        </div>
+
+        <h3 class="sub-title">Centres d'intérêt</h3>
+        <div class="interests-grid">
+          <div class="interest-item"><i class="fa-solid fa-running"></i><span>Sport</span></div>
+          <div class="interest-item"><i class="fa-solid fa-plane"></i><span>Voyage</span></div>
+          <div class="interest-item"><i class="fa-solid fa-film"></i><span>Cinéma</span></div>
+          <div class="interest-item"><i class="fa-solid fa-shirt"></i><span>Mode</span></div>
+        </div>
+
+        <h3 class="sub-title">Soft Skills</h3>
+        <div class="soft-skills-wrap">
+          <span class="soft-pill"><i class="fa-solid fa-comments"></i> Communication</span>
+          <span class="soft-pill"><i class="fa-solid fa-people-group"></i> Équipe</span>
+          <span class="soft-pill"><i class="fa-solid fa-lightbulb"></i> Créativité</span>
+          <span class="soft-pill"><i class="fa-solid fa-clock"></i> Organisation</span>
+          <span class="soft-pill"><i class="fa-solid fa-handshake"></i> Adaptabilité</span>
+          <span class="soft-pill"><i class="fa-solid fa-user-check"></i> Autonomie</span>
+          <span class="soft-pill"><i class="fa-solid fa-crown"></i> Leadership</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projets" class="section">
+    <h2 class="section-title">Projets & Compétences</h2>
+
+    <div class="cat-filter-row">
+      <button class="cat-btn active" data-filter="all">Tous</button>
+      <button class="cat-btn" data-filter="web">Web</button>
+      <button class="cat-btn" data-filter="hackathon">Hackathon</button>
+      <button class="cat-btn" data-filter="secu">Sécurité</button>
+      <button class="cat-btn" data-filter="game">Jeux</button>
+      <button class="cat-btn" data-filter="data">Data</button>
+    </div>
+
+    <div class="hard-skills-bar-row">
+      <div class="hskill active-skill" data-skill-filter="all">
+        <i class="fa-solid fa-layer-group"></i><span>Tout afficher</span>
+      </div>
+      <div class="hskill" data-skill-filter="html">
+        <i class="fa-brands fa-html5"></i><span>HTML</span>
+      </div>
+      <div class="hskill" data-skill-filter="css">
+        <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
+      </div>
+      <div class="hskill" data-skill-filter="js">
+        <i class="fa-brands fa-js"></i><span>JavaScript</span>
+      </div>
+      <div class="hskill" data-skill-filter="python">
+        <i class="fa-brands fa-python"></i><span>Python</span>
+      </div>
+      <div class="hskill" data-skill-filter="c">
+        <i class="fa-solid fa-c"></i><span>C</span>
+      </div>
+      <div class="hskill" data-skill-filter="php">
+        <i class="fa-brands fa-php"></i><span>PHP</span>
+      </div>
+      <div class="hskill" data-skill-filter="node">
+        <i class="fa-brands fa-node-js"></i><span>Node.js</span>
+      </div>
+      <div class="hskill" data-skill-filter="git">
+        <i class="fa-brands fa-git-alt"></i><span>Git</span>
+      </div>
+      <div class="hskill" data-skill-filter="mysql">
+        <i class="fa-solid fa-database"></i><span>MySQL</span>
+      </div>
+      <div class="hskill" data-skill-filter="secuweb">
+        <i class="fa-solid fa-shield-halved"></i><span>Sécu Web</span>
+      </div>
+      <div class="hskill" data-skill-filter="vuejs">
+        <i class="fa-solid fa-v"></i><span>Vue.js</span>
+      </div>
+    </div>
+
+    <div class="projects-container">
+
+      <div class="project-card" data-category="hackathon" data-skills="">
+        <div class="project-card-inner">
+          <div class="card-front">
+            <div class="card-emoji">🚀</div>
+            <h3>Act in Space 2026</h3>
+            <p class="card-sub">Hackathon 24h · Cannes</p>
+            <div class="card-tags">
+              <span>Cybersécurité</span>
+              <span>Satellites</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Conception d'un projet autour de la <strong>protection des communications satellites</strong> en 24h, avec pitch final devant des experts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="hackathon" data-skills="">
+        <div class="project-card-inner">
+          <div class="card-front">
+            <div class="card-emoji">🌱</div>
+            <h3>Climat et Data 2026</h3>
+            <p class="card-sub">Hackathon 72h · The Shifters</p>
+            <div class="card-tags">
+              <span>Data</span>
+              <span>App</span>
+              <span>Climat</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Application citoyenne pour <strong>agir concrètement pour le climat</strong>. Créativité, data et collaboration en 72h.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="web" data-skills="js node vuejs mysql">
+        <div class="project-card-inner">
+          <div class="card-front">
+            <div class="card-emoji">📋</div>
+            <h3>E-TODO</h3>
+            <p class="card-sub">App fullstack · Epitech</p>
+            <div class="card-tags">
+              <span>Vue.js</span>
+              <span>Node.js</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>TO-DO list fullstack réalisée en équipe. Intégration frontend et logique de filtrage.</p>
+            <div class="card-tech">Vue.js · Node.js · Express · MySQL</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="web" data-skills="html css js">
+        <div class="project-card-inner">
+          <div class="card-front">
+            <div class="card-emoji">🌐</div>
+            <h3>Portfolio</h3>
+            <p class="card-sub">Site perso responsive</p>
+            <div class="card-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Portfolio responsive avec animations CSS/JS, dark mode et design cohérent. Conception complète.</p>
+            <div class="card-tech">HTML · CSS · JavaScript</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="secu" data-skills="secuweb">
+        <div class="project-card-inner">
+          <div class="card-front">
+            <div class="card-emoji">🛡️</div>
+            <h3>Hack and Juice</h3>
+            <p class="card-sub">Sécurité Web · OWASP</p>
+            <div class="card-tags">
+              <span>OWASP Top 10</span>
+              <span>Injection</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Analyse de vulnérabilités sur OWASP Juice Shop: failles d'accès et d'injection.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="game" data-skills="js html css">
+        <div class="project-card-inner">
+          <div class="card-front">
+            <div class="card-emoji">🎮</div>
+            <h3>Batata Game</h3>
+            <p class="card-sub">Arcade · Canvas JS</p>
+            <div class="card-tags">
+              <span>JavaScript</span>
+              <span>Canvas</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Jeu 2D : éviter obstacles, récolter bonus. Canvas API pure JS.</p>
+            <a href="https://github.com/boukadidasarra5-cell/Batata-game" target="_blank" class="card-link-btn">
+              <i class="fa-brands fa-github"></i> Voir sur GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="game" data-skills="python">
+        <div class="project-card-inner">
+          <div class="card-front">
+            <div class="card-emoji">☕</div>
+            <h3>Cozy Café</h3>
+            <p class="card-sub">Mini-jeu · Python/Pygame</p>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>Pygame</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Jeu cozy de gestion d'un café développé en Python avec Pygame.</p>
+            <a href="https://github.com/boukadidasarra5-cell/shop-manager" target="_blank" class="card-link-btn">
+              <i class="fa-brands fa-github"></i> Voir sur GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="hackathon" data-skills="">
+        <div class="project-card-inner">
+          <div class="card-front">
+            <div class="card-emoji">🏆</div>
+            <h3>Innovatech · Elles Bougent</h3>
+            <p class="card-sub">Hackathon intergénérationnel</p>
+            <div class="card-tags">
+              <span>Innovation</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Hackathon mêlant marraines, étudiantes et lycéennes autour des enjeux de demain.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="data" data-skills="python">
+        <div class="project-card-inner">
+          <div class="card-front">
+            <div class="card-emoji">🚆</div>
+            <h3>TARDIS</h3>
+            <p class="card-sub">DataScience · SNCF</p>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>Streamlit</span>
+            </div>
+          </div>
+          <div class="card-back">
+            <p>Analyse de données SNCF : cleaning, exploration, visualisation.</p>
+            <div class="card-tech">Python · Jupyter Notebook · Streamlit</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="cards-container contact-cards">
+      <div class="card">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="links-stack">
+          <a href="mailto:sarra.boukadida@epitech.eu">Email</a>
+        </div>
+      </div>
+      <div class="card">
+        <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/boukadidasarra5-cell" target="_blank">GitHub</a>
+      </div>
+      <div class="card">
+        <i class="fa-brands fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/sarra-boukadida-214601389/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <p class="form-description">
+        <strong>Pour toute demande professionnelle, remplissez ce formulaire. Je vous répondrai dans les meilleurs délais.</strong>
       </p>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Formation en timeline -->
-<section id="formation" class="section">
-  <h2 class="section-title">Formation</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-      <div class="timeline-content">
-        <h3>Baccalauréat Général</h3>
-        <p>Spécialité scientifique, mention bien</p>
-        <span class="date">2022 – 2024</span>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
-      <div class="timeline-content">
-        <h3>Licence Informatique Accès Santé</h3>
-        <p>Université de Bretagne Sud – Lorient</p>
-        <span class="date">2024 – 2025</span>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
-      <div class="timeline-content">
-        <h3>Bachelor Informatique</h3>
-        <p>Epitech – Nice</p>
-        <span class="date">2025 – En cours</span>
-        <p class="extra">Titre RNCP Niveau 6</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="projets" class="section">
-  <h2 class="section-title">Projets</h2>
-  <div class="project-filters">
-  <button class="filter-btn active" data-filter="all">Tous</button>
-  <button class="filter-btn" data-filter="web">Web</button>
-  <button class="filter-btn" data-filter="hackathon">Hackathon</button>
-  <button class="filter-btn" data-filter="secu">Sécurité</button>
-  <button class="filter-btn" data-filter="game">Jeux</button>
-  <button class="filter-btn" data-filter="data">Data</button>
-</div>
-  <div class="projects-container">
-    <div class="project-card" data-category="hackathon">
-      <div class="project-card-inner">
-        <div class="card-front">
-          <i class="fa-solid fa-rocket"></i>
-          <h3>Hackathon - Act in Space 2026 – Cannes</h3>
-          <p>24h – Défi innovation</p>
+      <form class="contact-form" action="https://formspree.io/f/xanrblod" method="POST">
+        <div class="form-group">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required/>
         </div>
-        <div class="card-back">
-          <p>Un défi créatif et intense en seulement 24h.</p>
-          <p>Nous avons conçu un projet autour de <strong>la cybersécurité et de la protection des communications satellites </strong>, en réfléchissant aux “routes” critiques et aux moyens de les sécuriser et présenté un pitch final devant des experts.</p>
+        <div class="form-group">
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="_replyto" required/>
         </div>
-      </div>
-    </div>
-    <div class="project-card" data-category="hackathon">
-      <div class="project-card-inner">
-        <div class="card-front">
-          <i class="fa-solid fa-leaf"></i>
-          <h3>Hackathon - Climat & Data 2026 – The Shifters</h3>
-          <p>72h – Challenge Innovation</p>
+        <div class="form-group">
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-        <div class="card-back">
-          <p>En 72h, nous avons imaginé <strong> une application </strong> pour aider les citoyens à agir concrètement pour<strong> le climat</strong>.<br>Un challenge intense où créativité, data et collaboration étaient au cœur de chaque décision.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card" data-category="web">
-      <div class="project-card-inner">
-        <div class="card-front">
-          <i class="fa-solid fa-clipboard-list"></i>
-          <h3>Projet E-TODO</h3>
-          <p>TO-DO list</p>
-        </div>
-        <div class="card-back">
-          <p>Application de gestion de tâches réalisée en équipe à Epitech.</p>
-          <ul>
-            <li>Frontend : Vue.js</li>
-            <li>Backend : Node.js + Express.js</li>
-            <li>Base de données : MySQL</li>
-          </ul>
-          <p>Mon rôle : intégration du frontend et logique de filtrage.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card" data-category="web">
-      <div class="project-card-inner">
-        <div class="card-front">
-          <i class="fa-solid fa-globe"></i>
-          <h3>Portfolio Perso</h3>
-          <p>Site responsive avec animations</p>
-        </div>
-        <div class="card-back">
-          <p>Portfolio responsive réalisé en projet personnel.</p>
-          <ul>
-            <li>Frontend : HTML, CSS, JavaScript</li>
-            <li>Animations : transitions CSS et effets JS</li>
-            <li>Responsive : adapté aux mobiles et tablettes</li>
-          </ul>
-          <p>Mon rôle : conception complète.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card" data-category="secu">
-      <div class="project-card-inner">
-        <div class="card-front">
-          <i class="fa-solid fa-shield-halved"></i>
-          <h3>Hack & Juice</h3>
-          <p>Sécurité web</p>
-        </div>
-        <div class="card-back">
-          <p>Analyse de vulnérabilités sur OWASP Juice Shop.</p>
-          <ul>
-            <li>OWASP Top 10</li>
-            <li>Requêtes HTTP</li>
-            <li>Failles d’accès et d’injection</li>
-          </ul>
-          <p>Mon rôle : analyse des failles et résolution de challenges.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card" data-category="game">
-      <div class="project-card-inner">
-        <div class="card-front">
-          <i class="fa-solid fa-gamepad"></i>
-          <h3>Batata Game</h3>
-          <p>Mini‑jeu arcade en JS</p>
-        </div>
-        <div class="card-back">
-          <p>Jeu vidéo 2D développé en projet personnel.</p>
-          <ul>
-            <li>Front : HTML/CSS/JavaScript</li>
-            <li>Moteur : Canvas API</li>
-            <li>Concept : éviter obstacles + récolter bonus</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card" data-category="game">
-      <div class="project-card-inner">
-        <div class="card-front">
-          <i class="fa-solid fa-mug-hot"></i>
-          <h3>Cozy Café</h3>
-          <p>Mini‑jeu café – Python/Pygame</p>
-        </div>
-        <div class="card-back">
-          <p>Mini‑jeu cozy développé en projet personnel.</p>
-          <a href="https://github.com/boukadidasarra5-cell/shop-manager" target="_blank" class="card-link">Cliquez pour plus d'informations !</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card" data-category="hackathon">
-      <div class="project-card-inner">
-        <div class="card-front">
-          <i class="fa-solid fa-trophy"></i>
-          <h3>Challenge Innovatech – Elles Bougent</h3>
-          <p>Hackathon</p>
-        </div>
-        <div class="card-back">
-           <p>Hackathon intergénérationnel, proposant à des équipes composées de marraines, étudiantes et lycéennes de réfléchir aux enjeux de demain.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card" data-category="data">
-      <div class="project-card-inner">
-        <div class="card-front">
-          <i class="fa-solid fa-train"></i>
-          <h3>TARDIS</h3>
-          <p>Projet DataScience</p>
-        </div>
-        <div class="card-back">
-          <p>Analyse de données SNCF : cleaning, exploration, visualisation.</p>
-          <ul>
-            <li>Python</li>
-            <li>Jupyter Notebook</li>
-            <li>Streamlit</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-  <section id="skills" class="section">
-    <h2 class="section-title">Compétences</h2>
-
-    <!-- Hard Skills -->
-    <h3 class="sub-title">Hard Skills</h3>
-    <div class="cards-container">
-      <div class="card"><i class="fa-brands fa-html5"></i> HTML</div>
-      <div class="card"><i class="fa-brands fa-css3-alt"></i> CSS</div>
-      <div class="card"><i class="fa-brands fa-js"></i> JavaScript</div>
-      <div class="card"><i class="fa-brands fa-python"></i> Python</div>
-      <div class="card"><i class="fa-solid fa-c"></i> C</div>
-      <div class="card"><i class="fa-brands fa-php"></i> PHP</div>
-      <div class="card"><i class="fa-brands fa-node-js"></i> Node.js</div>
-      <div class="card"><i class="fa-brands fa-git-alt"></i> Git</div>
-      <div class="card"><i class="fa-solid fa-database"></i> MySQL</div>
-      <div class="card"><i class="fa-solid fa-shield-halved"></i> Sécurité Web</div>
-      <div class="card"><i class="fa-brands fa-python"></i> Jupyter Notebook</div>
-    </div>
-
-    <div class="skill-bars">
-      <div class="skill-bar"><span class="label">Frontend</span><div class="bar"><span class="fill" style="width:80%"></span></div></div>
-      <div class="skill-bar"><span class="label">Backend</span><div class="bar"><span class="fill" style="width:70%"></span></div></div>
-      <div class="skill-bar"><span class="label">Database (MySQL)</span><div class="bar"><span class="fill" style="width:65%"></span></div></div>
-    </div>
-
-
-    <h3 class="sub-title">Soft Skills</h3>
-    <div class="cards-container">
-      <div class="card"><i class="fa-solid fa-comments"></i> Communication</div>
-      <div class="card"><i class="fa-solid fa-people-group"></i> Travail en équipe</div>
-      <div class="card"><i class="fa-solid fa-lightbulb"></i> Créativité</div>
-      <div class="card"><i class="fa-solid fa-clock"></i> Gestion du temps</div>
-      <div class="card"><i class="fa-solid fa-handshake"></i> Adaptabilité</div>
-      <div class="card"><i class="fa-solid fa-handshake"></i>Autonomie</div>
-      <div class="card"><i class="fa-solid fa-handshake"></i>Leadership</div>
+        <button type="submit">Envoyer</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
     </div>
   </section>
-
-  <!-- Langues -->
-  <section id="languages" class="section">
-    <h2 class="section-title">Langues</h2>
-    <div class="skill-bars">
-      <div class="skill-bar"><span class="label">Anglais (C1)</span><div class="bar"><span class="fill" style="width:85%"></span></div></div>
-      <div class="skill-bar"><span class="label">Français (Bilingue)</span><div class="bar"><span class="fill" style="width:100%"></span></div></div>
-      <div class="skill-bar"><span class="label">Arabe (Bilingue)</span><div class="bar"><span class="fill" style="width:100%"></span></div></div>
-      <div class="skill-bar"><span class="label">Allemand (A2)</span><div class="bar"><span class="fill" style="width:40%"></span></div></div>
-    </div>
-  </section>
-
-  <!-- Centres d'intérêt -->
-  <section id="interets" class="section">
-    <h2 class="section-title">Centres d'intérêt</h2>
-    <div class="cards-container">
-      <div class="card"><i class="fa-solid fa-running"></i> Sport</div>
-      <div class="card"><i class="fa-solid fa-plane"></i> Voyage</div>
-      <div class="card"><i class="fa-solid fa-film"></i> Cinéma</div>
-      <div class="card"><i class="fa-solid fa-shirt"></i> Mode</div>
-    </div>
-  </section>
-
- <section id="contact" class="section">
-  <h2 class="section-title">Contact</h2>
-  
-  <!-- Liens directs -->
-  <div class="cards-container contact-cards">
-    <div class="card">
-      <i class="fa-solid fa-envelope"></i>
-      <div class="links-stack">
-        <a href="mailto:sarra.boukadida@epitech.eu">Email EPITECH</a>
-        <a href="mailto:sarra.boukadida@outlook.com">Email Outlook</a>
-      </div>
-    </div>
-    <div class="card"><i class="fa-brands fa-github"></i>
-      <a href="https://github.com/boukadidasarra5-cell" target="_blank">GitHub</a>
-    </div>
-    <div class="card"><i class="fa-brands fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/sarra-boukadida-214601389/" target="_blank">LinkedIn</a>
-    </div>
-  </div>
-
-  <!--formulaire -->
-  <div class="contact-box">
-    <p class="form-description">
-    <strong>Pour toute demande professionnelle, remplissez ce formulaire. Je vous répondrai dans les meilleurs délais</strong>
-    </p>
-
-    <form class="contact-form" action="https://formspree.io/f/xanrblod" method="POST">
-      <div class="form-group">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required/>
-      </div>
-      <div class="form-group">
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="_replyto" required/>
-      </div>
-      <div class="form-group">
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit">Envoyer</button>
-      <p id="form-status" class="form-status"></p>
-    </form>
-  </div>
-</section>
-
 
 </main>
+
+<div class="floating-stage" id="floatingStage">
+  <i class="fa-solid fa-circle-dot"></i>
+  <div class="floating-text">
+    <strong>Stage disponible</strong>
+    <span>À partir de juin</span>
+  </div>
+  <a href="#" class="floating-contact-btn" data-target="contact">Me contacter</a>
+</div>
 
 <script src="script.js"></script>
 </body>
