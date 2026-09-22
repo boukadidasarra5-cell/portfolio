@@ -102,7 +102,7 @@ skillChips.forEach(chip => {
   });
 });
 
-const phrases     = ["Étudiante à Epitech", "Passionnée de cybersécurité", "À la recherche d'un stage"];
+const phrases     = ["Étudiante à Epitech", "Développeuse web", "À la recherche d'un stage"];
 let phraseIndex   = 0;
 const dynamicText = $("#dynamic-text");
 

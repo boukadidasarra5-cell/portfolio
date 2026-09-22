@@ -3,455 +3,546 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CV / Portfolio - Sarra Boukadida</title>
+  <title>Sarra Boukadida | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-container">
-    <button class="logo" data-target="accueil">
-      <span class="logo-icon">🌟</span>
-      <span class="logo-text">Sarra Boukadida</span>
-    </button>
-    <ul class="nav-menu">
-      <li><a href="#" class="nav-link active" data-target="accueil">Profil</a></li>
-      <li><a href="#" class="nav-link" data-target="formation">À propos</a></li>
-      <li><a href="#" class="nav-link" data-target="projets">Projets & Skills</a></li>
-      <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+<header class="titlebar">
+  <button class="menu-toggle" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars"></i></button>
+  <button class="logo" data-target="accueil">
+    <span class="logo-text">sarra-boukadida</span><span class="logo-sep">/</span><span class="logo-sub">portfolio</span>
+  </button>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+</header>
+
+<div class="workspace">
+
+  <nav class="sidebar nav-menu">
+    <p class="explorer-label">Explorateur</p>
+    <ul class="file-list">
+      <li><a href="#" class="nav-link active" data-target="accueil"><i class="fa-solid fa-house file-icon"></i>Accueil</a></li>
+      <li><a href="#" class="nav-link" data-target="a-propos"><i class="fa-solid fa-user file-icon"></i>À propos</a></li>
+      <li><a href="#" class="nav-link" data-target="experience"><i class="fa-solid fa-briefcase file-icon"></i>Expérience</a></li>
+      <li><a href="#" class="nav-link" data-target="projets"><i class="fa-solid fa-diagram-project file-icon"></i>Projets</a></li>
+      <li><a href="#" class="nav-link" data-target="contact"><i class="fa-solid fa-envelope file-icon"></i>Contact</a></li>
     </ul>
-    <button id="theme-toggle" class="theme-toggle">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-    <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-  </div>
-</nav>
+  </nav>
 
-<main class="main-content">
+  <main class="main-content">
 
-  <section id="accueil" class="section active">
-    <div class="hero">
-      <div class="hero-top">
-        <div class="profile-container">
-          <img src="profile.jpg" alt="Sarra Boukadida" class="profile"/>
-          <div class="profile-glow"></div>
-        </div>
-        <div class="hero-info">
-          <h1 class="hero-name">Sarra Boukadida</h1>
-          <p class="hero-location"><i class="fa-solid fa-location-dot"></i> Nice, France</p>
-          <div class="stage-badge">
-            <i class="fa-solid fa-circle-dot pulse-dot"></i>
-            Disponible pour un stage – à partir de juin
+    <section id="accueil" class="section active">
+      <div class="tab-marker"><span class="dot"></span>Accueil</div>
+
+      <div class="hero">
+        <div class="hero-top">
+          <div class="profile-container">
+            <img src="profile.jpg" alt="Sarra Boukadida" class="profile"/>
           </div>
-          <p class="changing-text"><span id="dynamic-text"></span></p>
+          <div class="hero-info">
+            <h1 class="hero-name">Sarra Boukadida</h1>
+            <p class="hero-location"><i class="fa-solid fa-location-dot"></i> Nice, France</p>
+            <div class="stage-badge">
+              <i class="fa-solid fa-circle-dot pulse-dot"></i>
+              Recherche un stage de 4 mois (à partir d'avril 2027)
+            </div>
+            <p class="changing-text">// <span id="dynamic-text"></span></p>
+          </div>
+        </div>
+
+        <div class="card presentation-card">
+          <p>
+            Étudiante en 2<sup>e</sup> année de Bachelor Informatique, spécialité Conception d'applications web, cloud et blockchain, j'aime explorer différents environnements et domaines plutôt que de me limiter à une seule spécialité.
+            <br><br>
+            Ce qui me passionne avant tout, c'est la conception : imaginer de nouvelles idées et les concrétiser, qu'il s'agisse de développer une application ou même de concevoir un jeu. Chaque idée qui me traverse l'esprit, j'essaie de la transformer en quelque chose de réel.
+          </p>
+        </div>
+
+        <div class="hero-links">
+          <a href="mailto:sarra.boukadida@epitech.eu" class="hero-link">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+          <a href="https://github.com/boukadidasarra5-cell" target="_blank" class="hero-link">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/sarra-boukadida-214601389/" target="_blank" class="hero-link">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="card presentation-card">
-        <p>
-          Étudiante en <strong>Bachelor Informatique à Epitech Nice</strong>, je transforme des idées en projets concrets : applications web, mini-jeux, outils techniques…
-          Je m'intéresse particulièrement au <strong>développement full-stack</strong> et à <strong>la cybersécurité</strong>.
-          <br><br>
-          Je recherche <strong>un stage de 1 à 3 mois, à partir de juin</strong>, dans le développement web.
+    <section id="a-propos" class="section">
+      <div class="tab-marker"><span class="dot"></span>À propos</div>
+      <h2 class="section-title">À propos</h2>
+
+      <div class="formation-layout">
+
+        <div class="formation-left">
+          <h3 class="sub-title">Formation</h3>
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="timeline-content">
+                <h3>Bachelor Informatique</h3>
+                <p>Epitech — Nice <span class="badge-rncp">RNCP Niv. 6</span></p>
+                <span class="date">2025 – En cours · 2<sup>e</sup> année</span>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="timeline-content">
+                <h3>Licence Informatique Accès Santé</h3>
+                <p>Université de Bretagne Sud - Lorient</p>
+                <span class="date">2024 – 2025</span>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="timeline-content">
+                <h3>Baccalauréat Général</h3>
+                <p>Spécialité scientifique - <strong>Mention bien</strong></p>
+                <span class="date">2022 – 2024</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="formation-right">
+          <h3 class="sub-title">Langues</h3>
+          <div class="soft-skills-wrap">
+            <span class="soft-pill"><i class="fa-solid fa-language"></i> Anglais · B2</span>
+            <span class="soft-pill"><i class="fa-solid fa-language"></i> Français · Bilingue</span>
+            <span class="soft-pill"><i class="fa-solid fa-language"></i> Arabe · Bilingue</span>
+          </div>
+
+          <h3 class="sub-title">Centres d'intérêt</h3>
+          <div class="interests-grid">
+            <div class="interest-item"><i class="fa-solid fa-running"></i><span>Sport</span></div>
+            <div class="interest-item"><i class="fa-solid fa-plane"></i><span>Voyage</span></div>
+            <div class="interest-item"><i class="fa-solid fa-film"></i><span>Cinéma</span></div>
+            <div class="interest-item"><i class="fa-solid fa-shirt"></i><span>Mode</span></div>
+          </div>
+
+          <h3 class="sub-title">Soft skills</h3>
+          <div class="soft-skills-wrap">
+            <span class="soft-pill"><i class="fa-solid fa-comments"></i> Communication</span>
+            <span class="soft-pill"><i class="fa-solid fa-people-group"></i> Équipe</span>
+            <span class="soft-pill"><i class="fa-solid fa-lightbulb"></i> Créativité</span>
+            <span class="soft-pill"><i class="fa-solid fa-clock"></i> Organisation</span>
+            <span class="soft-pill"><i class="fa-solid fa-handshake"></i> Adaptabilité</span>
+            <span class="soft-pill"><i class="fa-solid fa-user-check"></i> Autonomie</span>
+            <span class="soft-pill"><i class="fa-solid fa-crown"></i> Leadership</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="tab-marker"><span class="dot"></span>Expérience</div>
+      <h2 class="section-title">Expérience</h2>
+
+      <div class="exp-entry">
+        <div class="exp-header">
+          <div>
+            <h3>Développeuse Odoo — Stage</h3>
+            <p class="exp-company">Sobware · Acsone by Trustteam <span class="exp-location">(Tunisie)</span></p>
+          </div>
+          <span class="exp-date">20 juin – 31 juillet 2026</span>
+        </div>
+        <p class="exp-desc">
+          Conception et développement, de zéro, d'un module Odoo 18 complet pour la gestion d'un cabinet de kinésithérapie : modélisation des données, vues, logique métier, contraintes de validation et facturation. Premier contact avec un vrai environnement ERP en production.
         </p>
+        <ul class="exp-highlights">
+          <li>Modèles de données liés (patients, séances, cures, facturation) avec relations et champs calculés</li>
+          <li>Vues formulaire, liste et calendrier en XML, alignées sur les conventions Odoo</li>
+          <li>Contraintes métier et validations via <code>@api.constrains</code></li>
+          <li>Montée en compétences accompagnée par un tuteur, sur un vrai cycle de dev ERP</li>
+        </ul>
+        <div class="exp-tags">
+          <span>Python</span>
+          <span>XML</span>
+          <span>Odoo ORM</span>
+          <span>PostgreSQL</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section">
+      <div class="tab-marker"><span class="dot"></span>Projets</div>
+      <h2 class="section-title">Projets & Compétences</h2>
+
+      <div class="cat-filter-row">
+        <button class="cat-btn active" data-filter="all">Tous</button>
+        <button class="cat-btn" data-filter="web">Web</button>
+        <button class="cat-btn" data-filter="hackathon">Hackathon</button>
+        <button class="cat-btn" data-filter="secu">Sécurité</button>
+        <button class="cat-btn" data-filter="game">Jeux</button>
+        <button class="cat-btn" data-filter="data">Data</button>
       </div>
 
-      <div class="hero-links">
-        <a href="mailto:sarra.boukadida@epitech.eu" class="hero-link">
-          <i class="fa-solid fa-envelope"></i> Email
-        </a>
-        <a href="https://github.com/boukadidasarra5-cell" target="_blank" class="hero-link">
-          <i class="fa-brands fa-github"></i> GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/sarra-boukadida-214601389/" target="_blank" class="hero-link">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
+      <div class="hard-skills-bar-row">
+        <div class="hskill active-skill" data-skill-filter="all">
+          <i class="fa-solid fa-layer-group"></i><span>Tout afficher</span>
+        </div>
+        <div class="hskill" data-skill-filter="html">
+          <i class="fa-brands fa-html5"></i><span>HTML</span>
+        </div>
+        <div class="hskill" data-skill-filter="css">
+          <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
+        </div>
+        <div class="hskill" data-skill-filter="js">
+          <i class="fa-brands fa-js"></i><span>JavaScript</span>
+        </div>
+        <div class="hskill" data-skill-filter="python">
+          <i class="fa-brands fa-python"></i><span>Python</span>
+        </div>
+        <div class="hskill" data-skill-filter="c">
+          <i class="fa-solid fa-c"></i><span>C</span>
+        </div>
+        <div class="hskill" data-skill-filter="java">
+          <i class="fa-brands fa-java"></i><span>Java</span>
+        </div>
+        <div class="hskill" data-skill-filter="react">
+          <i class="fa-brands fa-react"></i><span>React</span>
+        </div>
+        <div class="hskill" data-skill-filter="git">
+          <i class="fa-brands fa-git-alt"></i><span>Git</span>
+        </div>
+        <div class="hskill" data-skill-filter="mysql">
+          <i class="fa-solid fa-database"></i><span>MySQL</span>
+        </div>
+        <div class="hskill" data-skill-filter="postgres">
+          <i class="fa-solid fa-database"></i><span>PostgreSQL</span>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <section id="formation" class="section">
-    <h2 class="section-title">À propos</h2>
+      <div class="projects-container">
 
-    <div class="formation-layout">
-
-      <div class="formation-left">
-        <h3 class="sub-title" style="text-align:left; margin-top:0; margin-bottom:1rem">Formation</h3>
-        <div class="timeline">
-
-          <div class="timeline-item">
-            <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <div class="timeline-content">
-              <h3>Baccalauréat Général</h3>
-              <p>Spécialité scientifique — <strong>Mention bien</strong></p>
-              <span class="date">2022 – 2024</span>
+        <div class="project-card" data-category="web" data-skills="react python">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🌸</div>
+              <h3>ELIZA</h3>
+              <p class="card-sub">Chatbot IA · Bloom x Waynabox</p>
+              <div class="card-tags">
+                <span>React</span>
+                <span>Python</span>
+                <span>IA</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Chatbot IA multilingue (FR/EN/ES) pour Waynabox : guide d'achat, FAQ intelligente et relance de panier, sans dévoiler la destination surprise.</p>
+              <div class="card-tech">React · TypeScript · FastAPI · Groq</div>
+              <div class="card-link-row">
+                <a href="https://github.com/boukadidasarra5-cell/ELIZA" target="_blank" class="card-link-btn">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://bloom-waynabox.netlify.app/" target="_blank" class="card-link-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Site
+                </a>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="timeline-item">
-            <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
-            <div class="timeline-content">
-              <h3>Licence Informatique Accès Santé</h3>
-              <p>Université de Bretagne Sud – Lorient</p>
-              <span class="date">2024 – 2025</span>
+        <div class="project-card" data-category="web" data-skills="react python postgres">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🦖</div>
+              <h3>KAIJU</h3>
+              <p class="card-sub">Crisis Manager · Tokyork</p>
+              <div class="card-tags">
+                <span>React</span>
+                <span>Python</span>
+                <span>WebSocket</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Gestion de crise à Tokyork : ressources, quartiers et niveaux de catastrophe en temps réel.</p>
+              <div class="card-tech">React 19 · FastAPI · PostgreSQL · WebSocket</div>
+              <div class="card-link-row">
+                <a href="https://github.com/boukadidasarra5-cell/kaiju" target="_blank" class="card-link-btn">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://kaiju-crisis.netlify.app/" target="_blank" class="card-link-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Site
+                </a>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="timeline-item">
-            <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
-            <div class="timeline-content">
-              <h3>Bachelor Informatique</h3>
-              <p>Epitech – Nice <span class="badge-rncp">RNCP Niv. 6</span></p>
-              <span class="date">2025 – En cours</span>
+        <div class="project-card" data-category="hackathon" data-skills="">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🚀</div>
+              <h3>Act in Space 2026</h3>
+              <p class="card-sub">Hackathon 24h · Cannes</p>
+              <div class="card-tags">
+                <span>Cybersécurité</span>
+                <span>Satellites</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Conception d'un projet autour de la <strong>protection des communications satellites</strong> en 24h, avec pitch final devant des experts.</p>
             </div>
           </div>
-
-        </div>
-      </div>
-
-      <div class="formation-right">
-        <h3 class="sub-title">Langues</h3>
-        <div class="soft-skills-wrap">
-          <span class="soft-pill"><i class="fa-solid fa-language"></i> Anglais | C1</span>
-          <span class="soft-pill"><i class="fa-solid fa-language"></i> Français | Bilingue</span>
-          <span class="soft-pill"><i class="fa-solid fa-language"></i> Arabe | Bilingue</span>
-          <span class="soft-pill"><i class="fa-solid fa-language"></i> Allemand | A2</span>
-        </div>
-        <h3 class="sub-title">Centres d'intérêt</h3>
-        <div class="interests-grid">
-          <div class="interest-item"><i class="fa-solid fa-running"></i><span>Sport</span></div>
-          <div class="interest-item"><i class="fa-solid fa-plane"></i><span>Voyage</span></div>
-          <div class="interest-item"><i class="fa-solid fa-film"></i><span>Cinéma</span></div>
-          <div class="interest-item"><i class="fa-solid fa-shirt"></i><span>Mode</span></div>
         </div>
 
-        <h3 class="sub-title">Soft Skills</h3>
-        <div class="soft-skills-wrap">
-          <span class="soft-pill"><i class="fa-solid fa-comments"></i> Communication</span>
-          <span class="soft-pill"><i class="fa-solid fa-people-group"></i> Équipe</span>
-          <span class="soft-pill"><i class="fa-solid fa-lightbulb"></i> Créativité</span>
-          <span class="soft-pill"><i class="fa-solid fa-clock"></i> Organisation</span>
-          <span class="soft-pill"><i class="fa-solid fa-handshake"></i> Adaptabilité</span>
-          <span class="soft-pill"><i class="fa-solid fa-user-check"></i> Autonomie</span>
-          <span class="soft-pill"><i class="fa-solid fa-crown"></i> Leadership</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="projets" class="section">
-    <h2 class="section-title">Projets & Compétences</h2>
-
-    <div class="cat-filter-row">
-      <button class="cat-btn active" data-filter="all">Tous</button>
-      <button class="cat-btn" data-filter="web">Web</button>
-      <button class="cat-btn" data-filter="hackathon">Hackathon</button>
-      <button class="cat-btn" data-filter="secu">Sécurité</button>
-      <button class="cat-btn" data-filter="game">Jeux</button>
-      <button class="cat-btn" data-filter="data">Data</button>
-    </div>
-
-    <div class="hard-skills-bar-row">
-      <div class="hskill active-skill" data-skill-filter="all">
-        <i class="fa-solid fa-layer-group"></i><span>Tout afficher</span>
-      </div>
-      <div class="hskill" data-skill-filter="html">
-        <i class="fa-brands fa-html5"></i><span>HTML</span>
-      </div>
-      <div class="hskill" data-skill-filter="css">
-        <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
-      </div>
-      <div class="hskill" data-skill-filter="js">
-        <i class="fa-brands fa-js"></i><span>JavaScript</span>
-      </div>
-      <div class="hskill" data-skill-filter="python">
-        <i class="fa-brands fa-python"></i><span>Python</span>
-      </div>
-      <div class="hskill" data-skill-filter="c">
-        <i class="fa-solid fa-c"></i><span>C</span>
-      </div>
-      <div class="hskill" data-skill-filter="php">
-        <i class="fa-brands fa-php"></i><span>PHP</span>
-      </div>
-      <div class="hskill" data-skill-filter="node">
-        <i class="fa-brands fa-node-js"></i><span>Node.js</span>
-      </div>
-      <div class="hskill" data-skill-filter="git">
-        <i class="fa-brands fa-git-alt"></i><span>Git</span>
-      </div>
-      <div class="hskill" data-skill-filter="mysql">
-        <i class="fa-solid fa-database"></i><span>MySQL</span>
-      </div>
-      <div class="hskill" data-skill-filter="secuweb">
-        <i class="fa-solid fa-shield-halved"></i><span>Sécu Web</span>
-      </div>
-      <div class="hskill" data-skill-filter="vuejs">
-        <i class="fa-solid fa-v"></i><span>Vue.js</span>
-      </div>
-    </div>
-
-    <div class="projects-container">
-
-      <div class="project-card" data-category="hackathon" data-skills="">
-        <div class="project-card-inner">
-          <div class="card-front">
-            <div class="card-emoji">🚀</div>
-            <h3>Act in Space 2026</h3>
-            <p class="card-sub">Hackathon 24h · Cannes</p>
-            <div class="card-tags">
-              <span>Cybersécurité</span>
-              <span>Satellites</span>
+        <div class="project-card" data-category="hackathon" data-skills="">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🌱</div>
+              <h3>Climat et Data 2026</h3>
+              <p class="card-sub">Hackathon 72h · The Shifters</p>
+              <div class="card-tags">
+                <span>Data</span>
+                <span>App</span>
+                <span>Climat</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p><strong>🥇 1ère place</strong> Application citoyenne pour agir concrètement pour le climat. Projet réalisé en 72h.</p> 
             </div>
           </div>
-          <div class="card-back">
-            <p>Conception d'un projet autour de la <strong>protection des communications satellites</strong> en 24h, avec pitch final devant des experts.</p>
+        </div>
+
+        <div class="project-card" data-category="web" data-skills="js mysql">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">📋</div>
+              <h3>E-TODO</h3>
+              <p class="card-sub">App fullstack · Epitech</p>
+              <div class="card-tags">
+                <span>Vue.js</span>
+                <span>Node.js</span>
+                <span>MySQL</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>TO-DO list fullstack réalisée en équipe. Intégration frontend et logique de filtrage.</p>
+              <div class="card-tech">Vue.js · Node.js · Express · MySQL</div>
+            </div>
           </div>
+        </div>
+
+        <div class="project-card" data-category="web" data-skills="html css js">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🌐</div>
+              <h3>Portfolio</h3>
+              <p class="card-sub">Ce site · refonte complète</p>
+              <div class="card-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Portfolio personnel présentant mes projets, compétences et expériences en développement informatique.</p>
+              <div class="card-tech">HTML · CSS · JavaScript</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="secu" data-skills="">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🛡️</div>
+              <h3>Hack and Juice</h3>
+              <p class="card-sub">Sécurité Web · OWASP</p>
+              <div class="card-tags">
+                <span>OWASP Top 10</span>
+                <span>Injection</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Analyse de vulnérabilités sur OWASP Juice Shop : failles d'accès et d'injection.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="game" data-skills="js html css">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🎮</div>
+              <h3>Batata Game</h3>
+              <p class="card-sub">Arcade · Canvas JS</p>
+              <div class="card-tags">
+                <span>JavaScript</span>
+                <span>Canvas</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Jeu 2D : éviter obstacles, récolter bonus. Canvas API pure JS.</p>
+              <a href="https://github.com/boukadidasarra5-cell/Batata-game" target="_blank" class="card-link-btn">
+                <i class="fa-brands fa-github"></i> Voir sur GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="game" data-skills="python">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">☕</div>
+              <h3>Cozy Café</h3>
+              <p class="card-sub">Mini-jeu · Python/Pygame</p>
+              <div class="card-tags">
+                <span>Python</span>
+                <span>Pygame</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Jeu cozy de gestion d'un café développé en Python avec Pygame.</p>
+              <a href="https://github.com/boukadidasarra5-cell/shop-manager" target="_blank" class="card-link-btn">
+                <i class="fa-brands fa-github"></i> Voir sur GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="hackathon" data-skills="">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🏆</div>
+              <h3>Innovatech · Elles Bougent</h3>
+              <p class="card-sub">Hackathon intergénérationnel</p>
+              <div class="card-tags">
+                <span>Innovation</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Hackathon mêlant marraines, étudiantes et lycéennes autour des enjeux de demain.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="data" data-skills="python">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🚆</div>
+              <h3>TARDIS</h3>
+              <p class="card-sub">DataScience · SNCF</p>
+              <div class="card-tags">
+                <span>Python</span>
+                <span>Streamlit</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Analyse de données SNCF : cleaning, exploration, visualisation.</p>
+              <div class="card-tech">Python · Jupyter Notebook · Streamlit</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="data" data-skills="python">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">🛒</div>
+              <h3>NextBuy</h3>
+              <p class="card-sub">DataScience · Prédiction d'achats</p>
+              <div class="card-tags">
+                <span>Python</span>
+                <span>Data</span>
+                <span>Analyse</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>Système prédictif estimant les prochains achats d'un utilisateur grâce à l'analyse de données et au machine learning.</p>
+              <div class="card-tech">Python · Pandas · Scikit-Learn</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="data" data-skills="python">
+          <div class="project-card-inner">
+            <div class="card-front">
+              <div class="card-emoji">📘</div>
+              <h3>Alice in Wonderland — NLP Engine</h3>
+              <p class="card-sub">NLP · Analyse & traitement de texte</p>
+              <div class="card-tags">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>Data</span>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-tech">Python · NLP · Sklearn · NLTK / SpaCy</div>
+              <a href="https://github.com/boukadidasarra5-cell/Alice-in-Wonderland" target="_blank" class="card-link-btn">
+                <i class="fa-brands fa-github"></i> Voir sur GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="tab-marker"><span class="dot"></span>Contact</div>
+      <h2 class="section-title">Contact</h2>
+
+      <div class="cards-container contact-cards">
+        <div class="card">
+          <i class="fa-solid fa-envelope"></i>
+          <div class="links-stack">
+            <a href="mailto:sarra.boukadida@epitech.eu">Email</a>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/boukadidasarra5-cell" target="_blank">GitHub</a>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/sarra-boukadida-214601389/" target="_blank">LinkedIn</a>
         </div>
       </div>
 
-      <div class="project-card" data-category="hackathon" data-skills="">
-        <div class="project-card-inner">
-          <div class="card-front">
-            <div class="card-emoji">🌱</div>
-            <h3>Climat et Data 2026</h3>
-            <p class="card-sub">Hackathon 72h · The Shifters</p>
-            <div class="card-tags">
-              <span>Data</span>
-              <span>App</span>
-              <span>Climat</span>
-            </div>
+      <div class="contact-box">
+        <p class="form-description">
+          <strong>Pour toute demande professionnelle, remplissez ce formulaire. Je vous répondrai dans les meilleurs délais.</strong>
+        </p>
+        <form class="contact-form" action="https://formspree.io/f/xanrblod" method="POST">
+          <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required/>
           </div>
-          <div class="card-back">
-            <p>Application citoyenne pour <strong>agir concrètement pour le climat</strong>. Créativité, data et collaboration en 72h.</p>
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="_replyto" required/>
           </div>
-        </div>
+          <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+          <p id="form-status" class="form-status"></p>
+        </form>
       </div>
+    </section>
 
-      <div class="project-card" data-category="web" data-skills="js node vuejs mysql">
-        <div class="project-card-inner">
-          <div class="card-front">
-            <div class="card-emoji">📋</div>
-            <h3>E-TODO</h3>
-            <p class="card-sub">App fullstack · Epitech</p>
-            <div class="card-tags">
-              <span>Vue.js</span>
-              <span>Node.js</span>
-              <span>MySQL</span>
-            </div>
-          </div>
-          <div class="card-back">
-            <p>TO-DO list fullstack réalisée en équipe. Intégration frontend et logique de filtrage.</p>
-            <div class="card-tech">Vue.js · Node.js · Express · MySQL</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="web" data-skills="html css js">
-        <div class="project-card-inner">
-          <div class="card-front">
-            <div class="card-emoji">🌐</div>
-            <h3>Portfolio</h3>
-            <p class="card-sub">Site perso responsive</p>
-            <div class="card-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-            </div>
-          </div>
-          <div class="card-back">
-            <p>Portfolio responsive avec animations CSS/JS, dark mode et design cohérent. Conception complète.</p>
-            <div class="card-tech">HTML · CSS · JavaScript</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="secu" data-skills="secuweb">
-        <div class="project-card-inner">
-          <div class="card-front">
-            <div class="card-emoji">🛡️</div>
-            <h3>Hack and Juice</h3>
-            <p class="card-sub">Sécurité Web · OWASP</p>
-            <div class="card-tags">
-              <span>OWASP Top 10</span>
-              <span>Injection</span>
-            </div>
-          </div>
-          <div class="card-back">
-            <p>Analyse de vulnérabilités sur OWASP Juice Shop: failles d'accès et d'injection.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="game" data-skills="js html css">
-        <div class="project-card-inner">
-          <div class="card-front">
-            <div class="card-emoji">🎮</div>
-            <h3>Batata Game</h3>
-            <p class="card-sub">Arcade · Canvas JS</p>
-            <div class="card-tags">
-              <span>JavaScript</span>
-              <span>Canvas</span>
-            </div>
-          </div>
-          <div class="card-back">
-            <p>Jeu 2D : éviter obstacles, récolter bonus. Canvas API pure JS.</p>
-            <a href="https://github.com/boukadidasarra5-cell/Batata-game" target="_blank" class="card-link-btn">
-              <i class="fa-brands fa-github"></i> Voir sur GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="game" data-skills="python">
-        <div class="project-card-inner">
-          <div class="card-front">
-            <div class="card-emoji">☕</div>
-            <h3>Cozy Café</h3>
-            <p class="card-sub">Mini-jeu · Python/Pygame</p>
-            <div class="card-tags">
-              <span>Python</span>
-              <span>Pygame</span>
-            </div>
-          </div>
-          <div class="card-back">
-            <p>Jeu cozy de gestion d'un café développé en Python avec Pygame.</p>
-            <a href="https://github.com/boukadidasarra5-cell/shop-manager" target="_blank" class="card-link-btn">
-              <i class="fa-brands fa-github"></i> Voir sur GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="hackathon" data-skills="">
-        <div class="project-card-inner">
-          <div class="card-front">
-            <div class="card-emoji">🏆</div>
-            <h3>Innovatech · Elles Bougent</h3>
-            <p class="card-sub">Hackathon intergénérationnel</p>
-            <div class="card-tags">
-              <span>Innovation</span>
-            </div>
-          </div>
-          <div class="card-back">
-            <p>Hackathon mêlant marraines, étudiantes et lycéennes autour des enjeux de demain.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="data" data-skills="python">
-        <div class="project-card-inner">
-          <div class="card-front">
-            <div class="card-emoji">🚆</div>
-            <h3>TARDIS</h3>
-            <p class="card-sub">DataScience · SNCF</p>
-            <div class="card-tags">
-              <span>Python</span>
-              <span>Streamlit</span>
-            </div>
-          </div>
-          <div class="card-back">
-            <p>Analyse de données SNCF : cleaning, exploration, visualisation.</p>
-            <div class="card-tech">Python · Jupyter Notebook · Streamlit</div>
-          </div>
-        </div>
-      </div>
-      <div class="project-card" data-category="data" data-skills="python">
-  <div class="project-card-inner">
-    <div class="card-front">
-      <div class="card-emoji">🛒</div>
-      <h3>NextBuy</h3>
-      <p class="card-sub">DataScience · Prédiction d’achats</p>
-      <div class="card-tags">
-        <span>Python</span>
-        <span>Data</span>
-        <span>Analyse</span>
-      </div>
-    </div>
-    <div class="card-back">
-      <p>Système prédictif estimant les prochains achats d'un utilisateur grâce à l’analyse de données et au machine learning.</p>
-      <div class="card-tech">Python · Pandas · Scikit-Learn</div>
-    </div>
-  </div>
+  </main>
 </div>
-<div class="project-card" data-category="data" data-skills="python">
-  <div class="project-card-inner">
-    <div class="card-front">
-      <div class="card-emoji">📘</div>
-      <h3>Alice in Wonderland – NLP Engine</h3>
-      <p class="card-sub">NLP · Analyse & traitement de texte</p>
-      <div class="card-tags">
-        <span>Python</span>
-        <span>NLP</span>
-        <span>Data</span>
-      </div>
-    </div>
-    <div class="card-back">
-      <div class="card-tech">Python · NLP · Sklearn · NLTK / SpaCy</div>
-      <a href="https://github.com/boukadidasarra5-cell/Alice-in-Wonderland" target="_blank" class="card-link-btn">
-        <i class="fa-brands fa-github"></i> Voir sur GitHub
-      </a>
-    </div>
-  </div>
-</div>
 
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2 class="section-title">Contact</h2>
-
-    <div class="cards-container contact-cards">
-      <div class="card">
-        <i class="fa-solid fa-envelope"></i>
-        <div class="links-stack">
-          <a href="mailto:sarra.boukadida@epitech.eu">Email</a>
-        </div>
-      </div>
-      <div class="card">
-        <i class="fa-brands fa-github"></i>
-        <a href="https://github.com/boukadidasarra5-cell" target="_blank">GitHub</a>
-      </div>
-      <div class="card">
-        <i class="fa-brands fa-linkedin"></i>
-        <a href="https://www.linkedin.com/in/sarra-boukadida-214601389/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-
-    <div class="contact-box">
-      <p class="form-description">
-        <strong>Pour toute demande professionnelle, remplissez ce formulaire. Je vous répondrai dans les meilleurs délais.</strong>
-      </p>
-      <form class="contact-form" action="https://formspree.io/f/xanrblod" method="POST">
-        <div class="form-group">
-          <label for="name">Nom :</label>
-          <input type="text" id="name" name="name" required/>
-        </div>
-        <div class="form-group">
-          <label for="email">Email :</label>
-          <input type="email" id="email" name="_replyto" required/>
-        </div>
-        <div class="form-group">
-          <label for="message">Message :</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Envoyer</button>
-        <p id="form-status" class="form-status"></p>
-      </form>
-    </div>
-  </section>
-
-</main>
-
-<div class="floating-stage" id="floatingStage">
-  <i class="fa-solid fa-circle-dot"></i>
-  <div class="floating-text">
-    <strong>Stage disponible</strong>
-    <span>À partir de juin</span>
-  </div>
-  <a href="#" class="floating-contact-btn" data-target="contact">Me contacter</a>
-</div>
+<footer class="statusbar">
+  <span class="statusbar-item"><i class="fa-solid fa-location-dot"></i> Nice, France</span>
+  <span class="statusbar-item statusbar-status"><i class="fa-solid fa-circle-dot pulse-dot"></i> Disponible — avril 2027</span>
+  <span class="statusbar-item statusbar-right">UTF-8 · Web Dev</span>
+</footer>
 
 <script src="script.js"></script>
 </body>
